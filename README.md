@@ -6,7 +6,8 @@ The following project was created for watching UStvgo channels via home assistan
 Assuming you have a Home Assistant Core (python server) running 
 https://www.home-assistant.io/installation/
 
-and you are managing dashboards using YAML files
+and you are managing dashboards using YAML files:
+https://www.home-assistant.io/lovelace/dashboards/
 
 ### IMPORTANT:
 make sure you either DON'T have any settings for:
@@ -78,3 +79,13 @@ will trigger an exacution every X minutes (when no cron_min is provided the defa
 channel_dispatcher --log INFO
 ```
 for info level logs to be shown.
+
+## customization
+
+you can customize the board / card templates, change the columns or add additional configuration.
+endless possibilities, intro to design here: https://www.juanmtech.com/how-to-set-up-lovelace-on-home-assistant
+
+great information and documentation here: https://www.awesome-ha.com/
+
+more card icons can be found here:
+https://cdn.jsdelivr.net/npm/@mdi/font@5.3.45/preview.html
