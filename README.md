@@ -1,6 +1,7 @@
 # vstvgo-homeassistant-dashboard
 
-## The following repo was created for watching UStvgo channels via home assistant dashboard, broadcasting to google chromecast. 
+## description:
+The following project was created for watching UStvgo channels via home assistant dashboard, broadcasting to google chromecast. 
 
 Assuming you have a Home Assistant Core (python server) running 
 https://www.home-assistant.io/installation/
