@@ -10,7 +10,9 @@ and you are managing dashboards using YAML files:
 https://www.home-assistant.io/lovelace/dashboards/
 
 ------------
-<img src="https://raw.githubusercontent.com/yishait/ustvgo-homeassistant-dashboard/main/images/demo-light.jpeg" width=250 >
+<p align="center">
+  <img width="350" src="https://raw.githubusercontent.com/yishait/ustvgo-homeassistant-dashboard/main/images/demo-light.jpeg">
+</p>
 
 ### IMPORTANT:
 make sure you either DON'T have any settings for:
