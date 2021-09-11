@@ -1,0 +1,11 @@
+views:
+  - title: {{ board_key }}
+    cards:
+      - type: media-control
+        entity: media_player.{{ device }}
+      - type: grid
+        columns: 5
+        square: false
+        cards:
+{{ board_cards }}
+title: {{ board_key }}

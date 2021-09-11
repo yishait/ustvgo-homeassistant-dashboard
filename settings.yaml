@@ -1,0 +1,7 @@
+dashboard_settings:
+  room1: 
+    devices: 
+      - device_1
+  room2: 
+    devices:
+      - device_2

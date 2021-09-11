@@ -1,0 +1,4 @@
+    lovelace-{{ board }}: 
+      mode: yaml
+      filename: dashboards/{{ board }}.yaml
+      title: {{ board }}

@@ -1,0 +1,13 @@
+          - type: button
+            tap_action:
+              action: call-service
+              service: media_player.play_media
+              service_data:
+                media_content_type: media
+                media_content_id: >-
+                  {{ url }}
+              target:
+                entity_id: media_player.{{ player }}
+            icon: hass:television-classic
+            icon_height: 100px
+            name: {{ channel }}
