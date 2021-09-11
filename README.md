@@ -99,3 +99,13 @@ great information and documentation here: https://www.awesome-ha.com/
 
 more card icons can be found here:
 https://cdn.jsdelivr.net/npm/@mdi/font@5.3.45/preview.html
+
+
+## Thanks
+
+to everyone @[Home Assistant](https://www.home-assistant.io/ "Home Assistant")
+ for creating the amazing opensource platform for smart home integrations! 🙏🏼 <p align="center">
+  <img width="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/1200px-Home_Assistant_Logo.svg.png" link="https://www.home-assistant.io/">
+</p>
+
+and thanks to @[benmoose39](https://github.com/benmoose39 "benmoose39") for writing the automation on m3u fetching.
