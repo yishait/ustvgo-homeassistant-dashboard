@@ -1,7 +1,7 @@
 #!/bin/bash
 shopt -s expand_aliases
 
-cd scripts
+cd ustvgo-homeassistant-dashboard/scripts
 source virtualEnv.sh
 
 curr_addr=$(pwd)/channel_dispatcher.py

@@ -22,9 +22,9 @@ git clone https://github.com/yishait/ustvgo-homeassistant-dashboard.git
 
 once completed, setup the environment by running the setup.sh file
 ```
-source setup.sh
+source ustvgo-homeassistant-dashboard/scripts/setup.sh
 ```
-inside scripts folder
+A new virtualenv is created, sourced and requirements installed.
 
 add your rooms and the devices used in them to the settings.yaml file:
 dashboard_settings:

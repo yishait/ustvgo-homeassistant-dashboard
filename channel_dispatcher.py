@@ -141,7 +141,7 @@ def execute_update():
             room_conf=create_dashboard_conf(room)
             new_dashboard_configuration = new_dashboard_configuration + room_conf + "\n"
     
-        for device in rooms[room]:
+        for device in rooms[room]['devices']:
             os.chdir(main_path)
             selected_device = device
             selected_board_key = room
