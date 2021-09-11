@@ -8,7 +8,8 @@ https://www.home-assistant.io/installation/
 
 and you are managing dashboards using YAML files
 
-IMPORTANT: make sure you either DON'T have any settings for:
+### IMPORTANT:
+make sure you either DON'T have any settings for:
 ׳׳׳
 lovelace:
   dashboards:
