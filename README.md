@@ -8,6 +8,22 @@ https://www.home-assistant.io/installation/
 
 and you are managing dashboards using YAML files
 
+IMPORTANT: make sure you either DON'T have any settings for:
+׳׳׳
+lovelace:
+  dashboards:
+׳׳׳ 
+
+OR you DO have a place-holder
+׳׳׳
+lovelace:
+  dashboards: {}
+׳׳׳ 
+the script will not work if you ONLY have lovelace: setup like this:
+׳׳׳
+lovelace:
+׳׳׳ 
+
 this project utilizes https://github.com/benmoose39/ustvgo_to_m3u project to get the .m3u streaming files provided by ustvgo.tv, these streams are valid only for ~4 hours and need to be refreshed
 
 when managing the HA dashboards using YAML - no restart is required when refreshing the links in the dashboard.

@@ -28,6 +28,7 @@ settings_path = str(main_path)+"/settings.yaml"
 dashboard_path = "../dashboards"
 dashboard_configuration_path = str(main_path)+"/../configuration.yaml"
 ustvgo_path = str(main_path)+"/ustvgo"
+templates_path = str(main_path)+"/templates"
 
 Log_Format = "%(levelname)s %(asctime)s - %(message)s"
 logging.basicConfig(stream = sys.stdout, 
@@ -48,10 +49,15 @@ def load_configuration(dashboard_configuration_path):
 
 def configured_boards(dashboard_configuration_path):
     boards = []
-    configuration = load_configuration(dashboard_configuration_path)["lovelace"]['dashboards']
-    for room in configuration:
-        boards.append(room.split("lovelace-",1)[1])
-    return boards
+    configuration = load_configuration(dashboard_configuration_path)
+    try:
+        configured_boards = configuration["lovelace"]['dashboards']
+        for room in configured_boards:
+            boards.append(room.split("lovelace-",1)[1])
+        return boards
+    except:
+        return [""]
+
 
 def load_settings(settings_path):
     f = open(settings_path, "r")
@@ -100,6 +106,10 @@ def update_yaml_configuration_changes(conf_changed, yaml_path):
 def update_board_conf(conf,dashboard_configuration_path):
     configuration = load_configuration(dashboard_configuration_path)
     conf_dict=yaml.load(conf)
+
+    if 'lovelace' not in configuration:
+        love = yaml.load(lovelace_block())
+        configuration.update(love)
     configuration['lovelace']['dashboards'].update(conf_dict)
     update_yaml_configuration_changes(configuration,dashboard_configuration_path)
 
@@ -110,6 +120,11 @@ def create_dashboard(cards, selected_device, selected_board_key):
     board = tm.render(board_key=selected_board_key,
                       board_cards=cards, device=selected_device)
     return board
+
+def lovelace_block():
+    f = open(templates_path+"/lovelace_block_template", "r")
+    love = f.read()
+    return love
 
 def save_latest(dashboard, selected_board_key):
     os.chdir(dashboard_path)
@@ -136,7 +151,6 @@ def execute_update():
     for room in rooms:
         if room not in existing_boards:
             validate_dashboards_folder()
-
             logger.info("Room:"+room+" Not in existing boards adding.")
             room_conf=create_dashboard_conf(room)
             new_dashboard_configuration = new_dashboard_configuration + room_conf + "\n"
@@ -156,12 +170,11 @@ def execute_update():
     if len(new_dashboard_configuration) > 0:
         logger.info("Adding the following to configuration.yaml file.\n"+new_dashboard_configuration)
         update_board_conf(new_dashboard_configuration, dashboard_configuration_path)
-
     print("Done.")
+
 try:
     if args.cron == "false":
         execute_update()
-
     else:
         logger.info("starting in schedule mode, next run in: "+ str(args.cron_min) + " minutes")
         schedule.every(args.cron_min).minutes.do(execute_update) 
