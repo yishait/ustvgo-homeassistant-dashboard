@@ -15,14 +15,14 @@ steps to run:
 go to your .homeassistant folder (where the configuration.yaml is)
 and run:
 
-'''
+```
 git clone https://github.com/yishait/ustvgo-homeassistant-dashboard.git
-'''
+```
 
 once completed, setup the environment by running the setup.sh file
-'''
+```
 source setup.sh
-'''
+```
 inside scripts folder
 
 add your rooms and the devices used in them to the settings.yaml file:
@@ -38,19 +38,19 @@ if they dont exist - the script will add them to your configuration.yaml used to
 
 once all setup is completed you should see the new alias: channel_dispatcher
 and you will be able to run:
-'''
+```
 channel_dispatcher 
-'''
+```
 to create the channel cards and the dashboards according to the setup in settings.yaml
 
 ##additional vars:
 
-'''
+```
 channel_dispatcher --cron true --cron_min X
-'''
+```
 will trigger an exacution every X minutes (when no cron_min is provided the default is 210 min=3.5 hours).
 
-'''
+```
 channel_dispatcher --log INFO
-'''
+```
 for info level logs to be shown.
