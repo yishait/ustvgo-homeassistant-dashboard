@@ -1,6 +1,6 @@
 # vstvgo-homeassistant-dashboard
 
-The following repo was created for watching UStvgo channels via home assistant dashboard, broadcasting to google chromecast. 
+## The following repo was created for watching UStvgo channels via home assistant dashboard, broadcasting to google chromecast. 
 
 Assuming you have a Home Assistant Core (python server) running 
 https://www.home-assistant.io/installation/
@@ -11,8 +11,8 @@ this project utilizes https://github.com/benmoose39/ustvgo_to_m3u project to get
 
 when managing the HA dashboards using YAML - no restart is required when refreshing the links in the dashboard.
 
-steps to run:
-go to your .homeassistant folder (where the configuration.yaml is)
+## Setting up:
+go to your ~/.homeassistant folder (where the configuration.yaml is placed)
 and run:
 
 ```
@@ -36,14 +36,20 @@ dashboard_settings:
 
 if they dont exist - the script will add them to your configuration.yaml used to run Home-assistant 
 
+## Running channel_dispatcher
 once all setup is completed you should see the new alias: channel_dispatcher
 and you will be able to run:
 ```
 channel_dispatcher 
 ```
-to create the channel cards and the dashboards according to the setup in settings.yaml
+creating the channel cards and the dashboards according to the setup in settings.yaml, 
+you will be prompted the following question:
+update stream list? (Y / N)
 
-##additional vars:
+y = will refetch the m3u links.
+n = will only make sure the setup is correct and cards and dashboards are created.
+
+## additional vars:
 
 ```
 channel_dispatcher --cron true --cron_min X
