@@ -73,7 +73,7 @@ update stream list? (Y / N)
 y = will refetch the m3u links.
 n = will only make sure the setup is correct and cards and dashboards are created.
 
-## additional vars:
+### additional vars:
 
 ```
 channel_dispatcher --cron true --cron_min X
@@ -84,6 +84,11 @@ will trigger an exacution every X minutes (when no cron_min is provided the defa
 channel_dispatcher --log INFO
 ```
 for info level logs to be shown.
+
+## Scheduling
+if --cron is set to true,
+ the script will use the scheduler package to run the update every 3.5 hours as long as it is running.
+ usaully the links will be active to ~4 hours.
 
 ## customization
 
