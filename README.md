@@ -9,7 +9,8 @@ https://www.home-assistant.io/installation/
 and you are managing dashboards using YAML files:
 https://www.home-assistant.io/lovelace/dashboards/
 
-<img src="https://raw.githubusercontent.com/yishait/ustvgo-homeassistant-dashboard/main/images/demo-light.jpeg" width=250 ><img src="https://raw.githubusercontent.com/yishait/ustvgo-homeassistant-dashboard/main/images/demo-dark.jpeg" width=250 >
+------------
+<img src="https://raw.githubusercontent.com/yishait/ustvgo-homeassistant-dashboard/main/images/demo-light.jpeg" width=250 >     <img src="https://raw.githubusercontent.com/yishait/ustvgo-homeassistant-dashboard/main/images/demo-dark.jpeg" width=250 >
 
 ### IMPORTANT:
 make sure you either DON'T have any settings for:
